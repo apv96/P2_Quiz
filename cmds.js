@@ -101,7 +101,7 @@ exports.editCmd = (rl, id) => {
 };
 
 exports.testCmd = (rl, id) => {
-      if(typeof id === "undefined"){    //en el caso de que no pasen 'id'
+      if(typeof id === "undefined"){    
       errorlog('Falta el parametro id');
       rl.prompt();
       }else{
@@ -156,7 +156,7 @@ exports.playCmd = rl => {
                                log(` ${colorize("correcta","green")} ${score} `);
                                toBeResolved.splice(id, 1);
                                quizzes.splice(id, 1);
-                               playOne(); // recursividad vuelve a empezar desde el principio para preguntar otra vez 
+                               playOne(); 
                               }
                               else{
                               log(`${colorize("incorrecta","red")}`);
